@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class DemoDat250KristianTakvamApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(DemoDat250KristianTakvamApplication.class, args);
-	}
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello %s!", name);
-	}
+public class Vote {
+    private Instant publishedAt;
+
+    public Instant getPublishedAt() {
+        return publishedAt;
+    }
+
+    public void setPublishedAt(Instant publishedAt) {
+        this.publishedAt = publishedAt;
+    }
 }

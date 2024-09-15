@@ -3,12 +3,14 @@ package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.demo.User;
 import com.example.demo.PollManager;
+
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "http://localhost:5173")
 public class UserController {
-
     private final PollManager pollManager;
 
     @Autowired
@@ -39,9 +41,9 @@ public class UserController {
         User user = pollManager.getUser(username);
         if (user == null) {
             //throw new UserNotFoundException("User not found");
+            return "User does not exist";
         }
         pollManager.removeUser(username);
         return "User deleted successfully!";
     }
-    
 }

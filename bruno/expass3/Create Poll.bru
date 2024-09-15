@@ -1,0 +1,20 @@
+meta {
+  name: Create Poll
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/poll/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "question": "test",
+    "publishedAt": "",
+    "validUntil": ""
+  }
+  
+}

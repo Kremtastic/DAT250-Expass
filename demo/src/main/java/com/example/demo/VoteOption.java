@@ -1,24 +1,16 @@
 package com.example.demo;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import java.time.Instant;
 
-@SpringBootApplication
-@RestController
 public class VoteOption {
-    private String caption;
-    private int presentationOrder;
+    private String caption;  // The text of the vote option
+    private int presentationOrder;  // The order in which the options should appear
 
-    public VoteOption() {
-        //
+    public VoteOption(String caption, int presentationOrder) {
+        this.caption = caption;
+        this.presentationOrder = presentationOrder;
     }
 
-    public int getPresentationOrder() {
-        return presentationOrder;
-    }
+    // No-argument constructor
+    public VoteOption() {}
 
     public String getCaption() {
         return caption;
@@ -26,6 +18,10 @@ public class VoteOption {
 
     public void setCaption(String caption) {
         this.caption = caption;
+    }
+
+    public int getPresentationOrder() {
+        return presentationOrder;
     }
 
     public void setPresentationOrder(int presentationOrder) {

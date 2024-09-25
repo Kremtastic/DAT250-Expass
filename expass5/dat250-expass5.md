@@ -34,4 +34,5 @@
 ### Experiment 2 operation made by me:
 
 ![alt text](mapReduceMine.png)
+
 This map-reduce operation is useful because now you can see the total price per date any product was ordered. This informs us about which days were the most or least valuable.

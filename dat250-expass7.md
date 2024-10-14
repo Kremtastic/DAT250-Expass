@@ -2,7 +2,7 @@
 
 ### Using PostgresQL docker image
 
-
+I was unable to run the tests because of an error I experienced in back in expass4.
 
 
 

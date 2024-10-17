@@ -3,7 +3,8 @@
 ### Using PostgresQL docker image
 
 I run 
-``` docker run -p 8080:5432 \
+``` 
+docker run -p 8080:5432 \
  -e POSTGRES_USER=postgres \
  -e POSTGRES_PASSWORD=secret \
  -e POSTGRES_DB=mydatabase \
